@@ -1,0 +1,6 @@
+{% for post in most_viewed %}
+
+    <h4><a href="{{ post.get_absolute_url }}">{{post.title }}</a></h4>
+    <p>✔{{ post.see }} {{ post.created_at | date:"d-m-Y f"  }}</p>
+
+{% endfor %}

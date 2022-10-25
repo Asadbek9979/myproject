@@ -9,7 +9,7 @@ def list_view(request):
 	posts = Post.objects.filter(status='active')
 
 	# pageinator ---------------------------------->>>>
-	paginator = Paginator(posts, 5)
+	paginator = Paginator(posts, 3)
 	page = request.GET.get('page')
 	try:
 		posts = paginator.page(page)
